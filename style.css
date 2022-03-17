@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora&family=Montserrat&display=swap");
+
+:root {
+  /* Colors */
+  --black: #181719;
+  --white: #ffffff;
+  --gray: #828282;
+  /* Fonts */
+  --crimson: "Crimson Pro", serif;
+  --lora: "Lora", serif;
+  --montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  background: var(--black);
+  color: var(--white);
+}
+
+.wrapp {
+  padding: 2rem 5rem;
+}
+
+nav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_box {
+  border: 1px solid var(--white);
+  padding: 0.5rem;
+  font-family: var(--crimson);
+  font-weight: 200;
+  font-size: 0.875em;
+  line-height: 0.9725rem;
+}
+
+.menu {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 34rem;
+}
+
+.menu li {
+  padding-top: 0.6rem;
+  font-family: var(--montserrat);
+  font-weight: 500;
+}
+
+.menu li:first-child {
+  border-bottom: 1px solid var(--white);
+  font-weight: 700;
+}
+
+#responsive_menu {
+  display: none;
+}
+
+/* BODY */
+.text_display {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 7rem 0 11rem;
+}
+
+.text_zone {
+  width: 50%;
+  place-self: center;
+}
+
+.text_zone h2 {
+  padding-bottom: 2rem;
+  font-family: var(--lora);
+  font-size: clamp(2.25rem, calc(1.96rem + 1.46vw), 3rem);
+  line-height: 3.84rem;
+}
+
+.text_zone span {
+  padding-bottom: 2rem;
+  font-family: var(--montserrat);
+  font-size: clamp(0.88rem, calc(0.63rem + 1.22vw), 1.5rem);
+  line-height: 1.82875rem;
+}
+
+.read {
+  padding-top: 2rem;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: clamp(0.88rem, calc(0.78rem + 0.49vw), 1.13rem);
+  line-height: 1.37125rem;
+}
+
+.img {
+  width: 65%;
+  position: relative;
+}
+
+.tweet {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 2rem;
+  bottom: -6.5rem;
+  padding: 0.5rem 2rem 2rem;
+  max-width: 25.625rem;
+  width: 85%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: var(--black);
+}
+
+.profile_picture {
+  width: 4rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.profile_name {
+  font-family: var(--montserrat);
+}
+
+.profile_name h5 {
+  padding-bottom: 0.3rem;
+  font-size: clamp(0.75rem, calc(0.7rem + 0.24vw), 0.88rem);
+}
+
+.profile_name h6 {
+  font-size: clamp(0.63rem, calc(0.58rem + 0.24vw), 0.75rem);
+  color: var(--gray);
+}
+
+.header {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  place-items: center;
+  padding-bottom: 1rem;
+}
+
+.header .profile_name {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  width: 15rem;
+  font-family: var(--lora);
+  font-weight: 700;
+  font-size: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.5rem);
+  line-height: 1.92rem;
+}
+
+/* FOOTER  */
+footer {
+  text-align: center;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.066875rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .wrapp {
+    padding: 1rem;
+  }
+
+  nav ul {
+    width: 22rem;
+  }
+
+  .text_display {
+    flex-direction: column;
+  }
+
+  .text_zone {
+    width: unset;
+    place-self: unset;
+  }
+
+  .read {
+    padding: 2rem 0;
+  }
+
+  .img {
+    width: unset;
+    position: relative;
+  }
+
+  .tweet {
+    right: 1rem;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .menu {
+    display: none;
+  }
+
+  #responsive_menu {
+    display: block;
+    font-family: var(--montserrat);
+    font-size: 1.5rem;
+    z-index: 1;
+  }
+
+  #topBar {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  .responsive {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background: var(--black);
+    font-family: var(--montserrat);
+    gap: 4rem;
+  }
+
+  .responsive li {
+    padding-top: 0.6rem;
+    font-family: var(--montserrat);
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+
+  .responsive li:first-child {
+    border-bottom: 1px solid var(--white);
+    font-weight: 700;
+  }
+}

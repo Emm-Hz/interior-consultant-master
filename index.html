@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
 
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" charset="utf-8"></script>
+
+    <title>Consultant</title>
+  </head>
+
+  <body>
+    <div class="wrapp">
+      <nav>
+        <span class="nav_box">THIS INTERIOR</span>
+        <ul class="menu" id="topBar">
+          <li>Home</li>
+          <li>Collection</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+        <a id="responsive_menu" href="javascript:void(0);" onclick="responsive()">&#9776;</a>
+      </nav>
+      <section class="text_display">
+        <div class="text_zone">
+          <h2>Modern interior</h2>
+          <span>
+            A full-Service residential &
+            <br>
+            commercial interior design and
+            <br>
+            staging company offering
+            <br>
+            professional organizing &
+            <br>
+            eco-services.
+          </span>
+          <p class="read">Read more &ensp; &#8594;</p>
+        </div>
+        <div class="img">
+          <img src="./assets/photo1.png" alt="room" />
+          <div class="tweet">
+            <div class="header">
+              <img class="profile_picture" src="./assets/photo2.png" alt="profile_picture" />
+              <div class="profile_name">
+                <h5>Aliza Webber</h5>
+                <h6>Interior designer</h6>
+              </div>
+            </div>
+            <div class="content">
+              <span>Designed in 2020 by Aliza Webber</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>
+          created by Emm-Hz - devChallenges.io
+        </p>
+      </footer>
+    </div>
+  </body>
+
 </html>
